@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: "f8fcab6514msh8cab567b940f634p15a8a0jsn02b064a68262",
+  baseUrl: "https://deezerdevs-deezer.p.rapidapi.com"
 };
 
 /*
