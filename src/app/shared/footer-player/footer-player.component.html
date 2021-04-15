@@ -1,0 +1,43 @@
+<!-- <audio src="miaudio.mp3"  class="footer-player" controls> 
+    este es un elemento de audio no soportado por tu navegador, 
+    prueba con otro 
+</audio> -->
+<div class="container-footer-player" *ngIf="song">
+    <div class="subcontainer-image">
+        <img src="{{song.album.cover_small}}">
+    </div>
+    <div class="subcontainer-music">
+        <div class="subcontainer-song">
+            <span class="title-song"> {{song.title}} </span>
+            <span class="info-song"> {{song.artist.name}} - {{song.album.title}}</span>
+        </div> 
+        <div class="subcontainer-player">
+            <div>
+                <i class="fas fa-step-backward" #prevmusic></i>
+            </div>
+            <div (click)="playMusic(song)" *ngIf="!play">
+                <i class="fas fa-play-circle"  #playmusic></i>
+            </div>
+            <div (click)="pauseMusic()" *ngIf="play">
+                <i class="fas fa-pause-circle"  #playmusic></i>
+            </div>
+            <div (click)="nextMusic(song)">
+                <i class="fas fa-step-forward" #nextmusic></i>
+            </div>
+        </div>
+        <div class="subcontainer-volumen">
+                <input type="range" name="volumen" #volumen min="0" max="1" step="0.01" value="0.75"> 
+                <button class="button-icon"  *ngIf="!audio.muted" (click)="muted()">
+                    <i class="fas fa-volume-up"></i>                    
+                </button>
+                <button class="button-icon"  *ngIf="audio.muted" (click)="muted()">
+                    <i class="fas fa-volume-mute"></i>                    
+                </button>
+        </div>
+    </div>
+
+</div>
+<!-- 
+<audio controls>
+
+</audio> -->

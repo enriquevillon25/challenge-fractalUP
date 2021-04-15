@@ -1,0 +1,16 @@
+<div class="container-header">
+    <div class="subcontainer-search">
+        <div class="search">
+            <input  (keyup.enter)="sendSearch(searchLetter.value)" #searchLetter>
+            <button (click)="sendSearch(searchLetter.value)">         
+                <i class="fas fa-search" ></i>
+            </button>
+        </div>
+    </div>
+    <div class="subcontainer-user">
+        <div class="user">
+            <i class="fas fa-user"></i>   
+            <span> Enrique Villón</span>
+        </div>
+    </div>
+</div>  

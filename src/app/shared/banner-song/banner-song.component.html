@@ -1,0 +1,27 @@
+<div class="container-banner-song"  *ngIf="song" >
+    <div class="subcontainer-picture-album">
+        <img src="{{song.album.cover_small}}">
+        <div class="container-play">
+            <i class="fas fa-play"></i>
+        </div>
+    </div>
+    <div class="subcontainer-cover">
+        <div class="subcontainer-title-song">
+            <span> {{song.artist.name}} {{song.title}}</span>
+        </div>
+        <div class="subcontainer-followers">
+            <span> Lo mejor de {{song.artist.name}} </span> 
+            <span class="song-followers"> {{song.rank}} seguidores</span>
+        </div>
+         <span class="info-song"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quo earum, eius optio beatae similique quis voluptatum cumque excepturi consequatur. </span>    
+        <div class="subcontainer-button">
+            <button class="button play">
+                Reproducir
+            </button>
+            <button class="button follow">
+                Seguir
+            </button>
+            <span class="points"> ... </span>
+        </div>
+    </div>
+</div>

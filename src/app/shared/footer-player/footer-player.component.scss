@@ -1,0 +1,84 @@
+.container-footer-player{
+    background: #EB5757;
+    display: flex;
+    color: white;
+    height: 100px;
+    svg {
+        cursor: pointer;
+    }
+    .subcontainer-image{  
+        img{
+            width:120px;
+            height: 100%;
+        }
+    }
+    .subcontainer-music{
+        display: flex;
+        padding: 0 2%;
+        width: 100%;
+        justify-content: space-between;
+        line-height: 15px;
+        .subcontainer-song{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 12px;
+            gap: 6%;
+            width:10%;
+            .title-song{
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 17px;
+
+            }
+        }
+        .subcontainer-player{
+            display: flex;
+            font-size:35px;
+            gap: 15%;
+            align-items: center;
+           
+        }
+        .subcontainer-volumen{
+            display: flex;
+            gap: 14px;
+            font-size:20px;
+            align-items: center;
+            .button-icon{
+                cursor: pointer;
+                background: transparent;
+                border: none;
+                svg{
+                    font-size: 25px;
+                    color: white;
+                }
+            }
+            input{
+                cursor: pointer;
+            }
+            input[type=range]{
+                -webkit-appearance: none;
+            }
+            
+            input[type=range]::-webkit-slider-runnable-track {
+                height: .35em;
+                background: white;
+                border: none;
+                border-radius: 3px;
+            }
+            input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                border: none;
+                height: 1.1em;
+                width: 1.1em;
+                border-radius: 50%;
+                background: white;
+                margin-top: -4px;
+            }
+            
+            input[type=range]:focus {
+                outline: none;
+            }
+        }
+    }
+}

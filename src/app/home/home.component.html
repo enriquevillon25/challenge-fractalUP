@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="container-menu">
+        <div class="subcontainer-logo">
+            <img src="../../assets/images/logo-foxbel.png">
+        </div>
+        <div class="subcontainer-menu">
+                <span class="title-menu"> Mi Librería</span>
+                    <span> Recientes </span>
+                    <span> Artitas </span>
+                    <span> Álbums </span>
+                    <span> Canciones </span>
+                    <span> Estaciones </span>
+                
+                <span class="title-menu"> Playlist</span>
+                
+                    <span> Metal </span>
+                    <span> Para Bailar </span>
+                    <span> Rock 90s </span>
+                    <span> Baladas </span>
+            
+        </div>
+    </div>
+    <div class="container-menu2">
+        <Header (newItemEvent)="sendSearch($event)"></Header>
+        <Banner-Song [song]="songSelected" ></Banner-Song> 
+        <h4> Resultados </h4>
+        <div *ngIf="entrityResults" class="container-results">
+            <div *ngFor="let item of entrityResults; let i = index" class="card-song">
+                <div class="card-image">
+                    <img src="{{item.album.cover_small}}">
+                    <div class="container-play" (click)="playSong(item)">
+                        <i class="fas fa-play" ></i>
+                    </div>
+
+                </div>
+                <div class="info-song">
+                    <span class="title-song"> {{item.title}}    </span>
+                    <span> {{item.artist.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<Footer-Player [song]="songSelected" ></Footer-Player>
